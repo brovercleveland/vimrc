@@ -1,0 +1,3 @@
+[submodule "sources_non_forked/minibufexpl.vim"]
+	path = sources_non_forked/minibufexpl.vim
+	url = https://github.com/fholgado/minibufexpl.vim
