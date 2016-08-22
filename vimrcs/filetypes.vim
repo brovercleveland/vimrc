@@ -18,6 +18,8 @@ au FileType python map <buffer> <leader>2 /def
 au FileType python map <buffer> <leader>C ?class 
 au FileType python map <buffer> <leader>D ?def 
 
+au FileType python set nosmartindent 
+
 
 """"""""""""""""""""""""""""""
 " => JavaScript section
@@ -46,4 +48,4 @@ endfunction
 """""""""""""""""""
 " => Latex section
 """""""""""""""""""
-autocmd FileType tex set tw=100
+autocmd FileType tex,rst,python set tw=100

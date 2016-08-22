@@ -117,6 +117,7 @@ nnoremap <silent> <leader>z :Goyo<cr>
 " => Syntastic (syntax checker)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:syntastic_python_checkers=['pyflakes', 'flake8']
+let g:syntastic_rst_checkers=['sphinx']
 let g:syntastic_javascript_checkers = ['jshint']
 
 
