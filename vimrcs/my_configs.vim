@@ -10,8 +10,8 @@ let g:tex_flavor = "latex"
 if has("unix")
     let s:uname = system("uname -s")
     if s:uname == "Darwin"
-        nnoremap ∏ :bn<cr> 
-        nnoremap Ø :bp<cr>
+        nnoremap π :bn<cr> 
+        nnoremap ø :bp<cr>
     else
         exec "set <M-O>=\eo"
         exec "set <M-P>=\ep"
