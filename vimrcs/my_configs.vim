@@ -9,7 +9,7 @@ let g:tex_flavor = "latex"
 """ Alt key is treated differently in OSX vs. Linux.
 if has("unix")
     let s:uname = system("uname -s")
-    if s:uname == "Darwin"
+    if s:uname =~ "Darwin"
         nnoremap π :bn<cr> 
         nnoremap ø :bp<cr>
     else
