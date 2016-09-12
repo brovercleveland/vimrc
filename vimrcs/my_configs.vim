@@ -24,6 +24,7 @@ endif
 """""""""""""""""""""""""""
 """ Split Screen mappings 
 """""""""""""""""""""""""""
+
 " Map space to split screen cycle
 nmap <Space> <C-w><C-w>
 nnoremap <silent> <C-w><C-w> <C-w><C-w>:if &buftype ==# 'nofile'<Bar>wincmd w<Bar>endif<CR>
