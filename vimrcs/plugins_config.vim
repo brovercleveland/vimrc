@@ -27,6 +27,8 @@ map <leader>o :BufExplorer<cr>
 " => YouCompleteMe plugin
 """"""""""""""""""""""""""""""
 let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_python_binary_path = '/usr/local/bin/python3'
+let g:ycm_path_to_python_interpreter = '/usr/local/bin/python3'
 
 """"""""""""""""""""""""""""""
 " => MRU plugin
