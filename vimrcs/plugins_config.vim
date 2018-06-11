@@ -118,10 +118,13 @@ nnoremap <silent> <leader>z :Goyo<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Syntastic (syntax checker)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:syntastic_python_checkers=['pyflakes', 'flake8']
+let g:syntastic_python_checkers=['flake8']
 let g:syntastic_rst_checkers=['sphinx']
 let g:syntastic_javascript_checkers = ['jshint']
 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -129,3 +132,9 @@ let g:syntastic_javascript_checkers = ['jshint']
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gitgutter_enabled=0
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => clang-format
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:clang_format#command = 'clang-format-3.6'
