@@ -26,9 +26,22 @@ map <leader>o :BufExplorer<cr>
 """"""""""""""""""""""""""""""
 " => YouCompleteMe plugin
 """"""""""""""""""""""""""""""
+let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_python_binary_path = '/Users/brianpollack/.pyenv/versions/3.6.7/bin/python3'
-let g:ycm_path_to_python_interpreter = '/Users/brianpollack/.pyenv/versions/3.6.7/bin/python3'
+let g:ycm_autoclose_preview_window_after_insertion = 1
+"let g:ycm_python_binary_path = '/opt/packages/python/gnu_openmpi/3.6.4_np1.14.5/bin/python'
+"let g:ycm_path_to_python_interpreter = '/opt/packages/python/gnu_openmpi/3.6.4_np1.14.5/bin/python'
+" augroup MyYCMCustom
+"   autocmd!
+"   autocmd FileType python let b:ycm_hover = {
+"     \ 'command': 'GetDoc',
+"     \ 'syntax': &filetype
+"     \ }
+" augroup END
+let g:ycm_auto_hover = 'CursorHold'
+nmap <S-tab> <plug>(YCMHover)
+set completeopt+=popup
+let g:ycm_confirm_extra_conf = 0
 
 """"""""""""""""""""""""""""""
 " => MRU plugin

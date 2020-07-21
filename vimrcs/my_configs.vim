@@ -13,10 +13,12 @@ if has("unix")
         nnoremap π :bn<cr> 
         nnoremap ø :bp<cr>
     else
-        exec "set <M-O>=\eo"
-        exec "set <M-P>=\ep"
-        nnoremap <M-P> :bn<cr>
-        nnoremap <M-O> :bp<cr>
+        "exec "set <M-O>=\eo"
+        "exec "set <M-P>=\ep"
+        "nnoremap <M-P> :bn<cr>
+        "nnoremap <M-O> :bp<cr>
+        nnoremap π :bn<cr> 
+        nnoremap ø :bp<cr>
     endif
 endif
 
@@ -49,3 +51,31 @@ else
 endif
 
 
+""""""""""""""""""""""""""
+""" Clipboard Yanks
+""""""""""""""""""""""""""
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+noremap <Leader>Y "+y
+noremap <Leader>P "+p
+
+"""""""""""""""""""""""""
+""" -X startup option
+"""""""""""""""""""""""""
+"-X          Do not try connecting to the X server to get the current
+"            window title and copy/paste using the X clipboard.  This
+"            avoids a long startup time when running Vim in a terminal
+"            emulator and the connection to the X server is slow.
+"            See --startuptime to find out if affects you.
+"            Only makes a difference on Unix or VMS, when compiled with the
+"            +X11 feature.  Otherwise it's ignored.
+"            To disable the connection only for specific terminals, see the
+"            'clipboard' option.
+"            When the X11 Session Management Protocol (XSMP) handler has
+"            been built in, the -X option also disables that connection as
+"            it, too, may have undesirable delays.
+set clipboard=exclude:.*
+
+""""""""""""""""
+"Fix Python compile issue?
+"
