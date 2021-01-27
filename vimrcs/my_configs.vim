@@ -7,19 +7,19 @@ let g:tex_flavor = "latex"
 
 """ Set next (previous) buffer to Alt-p (o).
 """ Alt key is treated differently in OSX vs. Linux.
-if has("unix")
-    let s:uname = system("uname -s")
-    if s:uname =~ "Darwin"
-        nnoremap π :bn<cr> 
-        nnoremap ø :bp<cr>
-    else
-        "exec "set <M-O>=\eo"
-        "exec "set <M-P>=\ep"
-        "nnoremap <M-P> :bn<cr>
-        "nnoremap <M-O> :bp<cr>
-        nnoremap π :bn<cr> 
-        nnoremap ø :bp<cr>
-    endif
+let s:uname = system("uname -s")
+if s:uname =~ "Darwin"
+    nnoremap π :bn<cr> 
+    nnoremap ø :bp<cr>
+else
+    exec "set <M-O>=\eo"
+    exec "set <M-P>=\ep"
+    nnoremap <M-P> :bn<cr>
+    nnoremap <M-O> :bp<cr>
+    nnoremap π :bn<cr> 
+    nnoremap ø :bp<cr>
+    "nnoremap <M-P> :bn<cr> 
+    "nnoremap <M-O> :bp<cr>
 endif
 
 
